@@ -1,0 +1,7 @@
+File -> Preferences -> Settings and in the search bar write "automation".
+
+After that, by looking your operating system enter "edit in settings.json".
+
+Finally, add the following b/n the braces:
+
+"terminal.integrated.shellArgs.windows": ["-ExecutionPolicy", "Bypass"]
