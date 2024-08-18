@@ -37,3 +37,17 @@ Install npm and dependencies manually
 * Change to the app-ggb directory `cd app-ggb`
 * Install all dependencies `npm i`
 * Run `ng serve --open --host 0.0.0.0`
+
+## Build
+
+### Static
+* Run: `npm run build`
+* Copy "out" directory to server inside web hosting app (like IIS or Tomcat)
+
+### NodeJS
+* Removing (output: 'export') from next.config.mjs
+* Add NodeJS to server
+* Copy source to server
+* Run
+    * `npm run build`
+    * `npm run start`
