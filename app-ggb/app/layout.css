@@ -1,0 +1,4 @@
+#background { position: fixed; height: 100vh; width: 100vw; background: url('/assets/images/gg_bg.jpg'); background-size: cover; }
+/*#background > * { position: absolute; height: 100%; width: 100%; }
+#background-left { background: url('images/gg_bg_car.jpg'); background-size: cover; transform: translateX(-50%); }
+#background-right { background: url('images/gg_bg_volleyball.jpg'); background-size: cover; transform: translateX(+50%); }*/

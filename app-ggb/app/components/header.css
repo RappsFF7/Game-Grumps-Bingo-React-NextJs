@@ -1,0 +1,14 @@
+#header-bar { background-color: #F39450; text-align: left; padding: 1vh; margin-bottom: 4vh; line-height: 1vh; box-shadow: 0 0 10px black; }
+#header-bar > * { vertical-align: middle; }
+#header-bar img { height: 5vh; max-height: 10vw; }
+
+#header-menu { float: right; }
+#header-menu > * { margin-left: 15px; }
+#header-menu-popup { background-color: #F39450; padding: 1vh; position: fixed; top: 0; right: 0; box-shadow: -1px 1px 20px black; }
+#header-menu-popup ul { display: inline-block; }
+#header-menu-popup li { font-size: 2.5vmin; padding: 1vmin; line-height: 1em; }
+#header-menu-popup li:first-child { padding: 0; text-align: right; }
+#header-menu-popup li:last-child { padding-bottom: 0px; }
+#header-menu-popup li > a > * { vertical-align: middle; }
+#header-menu-popup img { height: 5vmin; padding-right: 20px; }
+#header-menu-popup li:first-child img { padding: 0; }

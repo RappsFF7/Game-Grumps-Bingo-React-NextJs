@@ -1,107 +1,61 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+/* You can add global styles to this file, and also import other style files */
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+/* touch-action: manipulation; Fixed 300ms delay on touch-click event, but removes double-tap to zoom */
+html { touch-action: manipulation; }
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+body { padding: 0; margin: 0; }
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
+.color-bg-orange { background-color: #F39450; }
+.color-bg-orange-lighter { background-color: #F2A561; }
+.color-bg-orange-lightest { background-color: #f1d2b8; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.template { display: none; }
+.dialog { display: none; }
+.hidden { display: none !important; }
+.ul-nostyle { padding: 0; margin: 0; }
+.ul-nostyle > li { padding: 0; margin: 0; list-style: none; }
+.hr { border-top: 1px solid #f1d2b8; margin: 5px; }
+.button { background-color: #F2A561; color: black; border: none; border-radius: 5vw; padding: 1vw 3vw; }
+.select-button { background: none; border: none; }
+.select-button.single { background: none; -webkit-appearance: none; border: none; }
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+#ggb,
+#ggb button,
+#ggb input,
+#ggb select,
+#ggb option { font-size: 32px; font-family: 'B612', sans-serif; }
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+#ggb .clickable { cursor: pointer; }
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
+#ggb .icon { height: 50px; width: 50px; }
+#ggb .icon-delete { background-image: url('/assets/images/icons8-delete-50.svg'); background-size: contain; }
+#ggb .icon-list { background-image: url('/assets/images/icons8-playlist-50.png'); }
+#ggb .icon-load { background-image: url('/assets/images/icons8-reply-arrow-50.png'); }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+#ggb .icon-checkbox { display: none; }
+#ggb .icon-checkbox ~ label { display: inline-block; height: 50px; width: 50px; background-image: url('/assets/images/icons8-toggle-off-50.png'); background-size: contain; }
+#ggb .icon-checkbox:checked ~ label { background-image: url('/assets/images/icons8-toggle-on-50.png'); }
+#ggb .icon-checkbox.icon-grid ~ label { background-image: url('/assets/images/icons8-squared-menu-outer-50.png'); height: 75px; width: 75px; }
+#ggb .icon-checkbox.icon-grid:checked ~ label { background-image: url('/assets/images/icons8-squared-menu-center-50.png'); }
+#ggb .icon-checkbox.icon-lock ~ label { background-image: url('/assets/images/icons8-lock-open-50.png'); }
+#ggb .icon-checkbox.icon-lock:checked ~ label { background-image: url('/assets/images/icons8-lock-50.png'); }
+#ggb .icon-checkbox.icon-dot ~ label { background-image: url('/assets/images/icons8-circle-filled-50.png'); }
+#ggb .icon-checkbox.icon-dot:checked ~ label { background-image: url('/assets/images/icons8-circle-50.png'); }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+#ggb .edit-list { width: 100%; max-width: 1024px; border-spacing: 0 1vw; }
+#ggb .edit-list tr { }
+#ggb .edit-list tr > * { padding: 10px 15px; }
+#ggb .edit-list tr > *:first-child { border-radius: 25px 0 0 25px; padding-left: 30px; }
+#ggb .edit-list tr > *:last-child { border-radius: 0 25px 25px 0; padding-right: 30px; width: 100%; }
+#ggb .edit-list td { }
+#ggb .edit-list td > * { vertical-align: middle; }
+#ggb .edit-list th.min { width: 1%; }
+#ggb .edit-list input { width: 90%; border-radius: 25px; border: none; padding: 5px 30px; background-color: #f1d2b8; }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+#ggb #content { position: relative; text-align: center; user-select: none; }
+#ggb #content table { display: inline-table; }
+#ggb #content table.template { display: none; }
+#ggb #content .content-body { box-shadow: 0 0 10px black; background-color: #F39450; }
