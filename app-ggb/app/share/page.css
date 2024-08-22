@@ -1,0 +1,3 @@
+#share-wrapper { padding: 5px 10px; }
+#share-wrapper > div { line-height: initial; }
+#share-wrapper #lnkShare { background-color: #f1d2b8; display: inline-block; padding: 0.5em 1em; margin: 1em; border-radius: 2em; }

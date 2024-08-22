@@ -1,6 +1,7 @@
 'use client'
 
 import { ChangeEvent } from "react"
+import { useSearchParams } from "next/navigation"
 import useGameboard from "@/app/_hooks/useGameboard"
 import Tile from "@/app/_models/tile"
 import {default as GameboardType} from "@/app/_models/gameboard"
@@ -8,8 +9,14 @@ import './gameboard.css'
 
 export default function Gameboard() {
     const gameboardService = useGameboard()
-    const gameboardState = gameboardService.gameboardContext.state
+    const gameboardState = gameboardService.context.state
     const gameboard = gameboardState.currentBoard
+
+    const searchParams = useSearchParams();
+    const customBoard = searchParams.get("customBoard")
+    if (customBoard) {
+        gameboardState.currentBoard = GameboardType.fromSerialized(customBoard);
+    }
 
     function doSelectBoardChange(e: ChangeEvent<HTMLSelectElement>) {
         const selectedBoardIndex = Number.parseInt(e.target.value)
@@ -19,26 +26,26 @@ export default function Gameboard() {
 
     function doSelectBoard(board: GameboardType) {
         board.doRandomizeRows(true)
-        gameboardService.gameboardContext.updateState({currentBoard: board})
+        gameboardService.context.updateState({currentBoard: board})
     }
 
     function doHideBingo() {
         if (gameboard) {
             gameboard.isBingo = false
-            gameboardService.gameboardContext.updateState()
+            gameboardService.context.updateState()
         }
     }
 
     function doToggleSquare(c: Tile) {
         c.isSelected = !c.isSelected
         gameboard?.doCheckForBingo()
-        gameboardService.gameboardContext.updateState()
+        gameboardService.context.updateState()
     }
 
     function doClear() {
         if (confirm("Clear Board will uncheck all checked board tiles. Do you want to continue?")) {
             gameboard?.doClearSelected()
-            gameboardService.gameboardContext.updateState()
+            gameboardService.context.updateState()
         }
     }
 
@@ -46,7 +53,7 @@ export default function Gameboard() {
         if (confirm("Clear board and randomize available tiles and placement?")) {
             gameboard?.doClearSelected()
             gameboard?.doRandomizeRows()
-            gameboardService.gameboardContext.updateState()
+            gameboardService.context.updateState()
         }
     }
 

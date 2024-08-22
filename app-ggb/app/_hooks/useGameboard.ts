@@ -2,14 +2,19 @@
 
 import { useEffect, useState } from 'react'
 import Gameboard from "@/app/_models/gameboard"
-import { useGameboardContext } from '@/app/_contexts/gameboardContext'
-import { Dosis } from 'next/font/google'
+import { GameboardContextState, useGameboardContext } from '@/app/_contexts/gameboardContext'
 
-export default function useGameboard() {
+type UseGameboardType = {
+    context: GameboardContextState,
+    doSave: () => void,
+    doLoad: () => void
+}
+
+export default function useGameboard(): UseGameboardType {
     const gameboardContext = useGameboardContext()
 
     const hook = {
-        gameboardContext,
+        context: gameboardContext,
 
         doSave: function() {
             // Save gameboards in local storage
