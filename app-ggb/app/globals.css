@@ -8,6 +8,8 @@ html { touch-action: manipulation; }
 
 body { padding: 0; margin: 0; }
 
+a { color: black; }
+
 .color-bg-orange { background-color: #F39450; }
 .color-bg-orange-lighter { background-color: #F2A561; }
 .color-bg-orange-lightest { background-color: #f1d2b8; }

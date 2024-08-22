@@ -2,10 +2,12 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import useGameboard from "@/app/hooks/useGameboard"
 import './header.css'
 
 export default function Header() {
     const [isShowNavDropdown, setIsShowNavDropdown] = useState<boolean>(false)
+    const gameboardService = useGameboard()
 
     const onToggleNav = () => {
         setIsShowNavDropdown(!isShowNavDropdown)
@@ -13,9 +15,7 @@ export default function Header() {
     const onReset = () => {
         if (confirm("Reset will delete all saved gameboards and reload the page resetting the current config. Continue?")) {
             localStorage.clear();
-            /*this.gameboardService.doLoad();
-            this.gameboardService.currentBoard.doRandomizeRows(true);
-            this.router.navigate(["/"]);*/
+            gameboardService.doLoad();
         }
     }
 

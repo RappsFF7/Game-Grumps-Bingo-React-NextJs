@@ -9,6 +9,7 @@
 #header-menu-popup li { font-size: 2.5vmin; padding: 1vmin; line-height: 1em; }
 #header-menu-popup li:first-child { padding: 0; text-align: right; }
 #header-menu-popup li:last-child { padding-bottom: 0px; }
+#header-menu-popup li > a { text-decoration: none; }
 #header-menu-popup li > a > * { vertical-align: middle; }
 #header-menu-popup img { height: 5vmin; padding-right: 20px; }
 #header-menu-popup li:first-child img { padding: 0; }

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Header from "@/app/components/header";
+import GameboardContextProvider from "@/app/contexts/gameboardContext";
 import "./globals.css";
 import "./layout.css";
-import Header from "./components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,22 +18,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div id='ggb'>
-          <div id="background">
-              <div id="background-left"></div>
-              <div id="background-right"></div>
+    <GameboardContextProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <div id='ggb'>
+            <div id="background">
+                <div id="background-left"></div>
+                <div id="background-right"></div>
+            </div>
+            <div id="content">
+                <Header />
+                {children}
+                <div id="dialogs">
+                    <div id="dlg" className="dialog"></div>
+                </div>
+            </div>
           </div>
-          <div id="content">
-              <Header />
-              {children}
-              <div id="dialogs">
-                  <div id="dlg" className="dialog"></div>
-              </div>
-          </div>
-        </div>
-      </body>
-    </html>
+        </body>
+      </html>
+    </GameboardContextProvider>
   );
 }

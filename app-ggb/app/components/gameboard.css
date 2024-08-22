@@ -1,0 +1,15 @@
+#win-wrapper { display: grid; position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(255, 255, 255, 0.5); }
+#win-wrapper #bingo-text { max-width: 90vw; max-height: 90vh; margin: auto; transform: rotate(-17deg); }
+
+#gameboard-wrapper { display: block; }  
+#gameboard-wrapper.content-body { box-shadow: none !important; background-color: transparent !important; }
+#gameboard { table-layout: fixed; border-collapse: collapse; object-fit: contain; box-shadow: 0 0 10px black; }
+#gameboard tr > th { height: auto; }
+#gameboard tr > * { background: white; text-align: center; padding: 1vmin; width: 10vmin; height: 10vmin; font-size: 2.5vmin; border: solid 2px black; }
+#gameboard tr select,
+#gameboard tr select option { font-size: 3vmin; }
+#gameboard td { line-height: initial; }
+#gameboard td.checked { background: rgba(255,255,255,0.5); text-shadow: -2px 2px white, 1px -1px white; }
+#gameboard #gameboard-name,
+#gameboard #gameboard-name option { background: none; font-size: 3vmin; }
+#gameboard #gameboard-actions { display: flex; justify-content: space-evenly; }
