@@ -2,7 +2,7 @@
 
 A fun weekend project I started when the streamer Bingo card trend took off. This is a conversion of my [original GGB project](https://github.com/RappsFF7/Game-Grumps-Bingo) in plain HTML/CSS/JS to Angular.
 
-![Website Screenshot](https://raw.githubusercontent.com/RappsFF7/Game-Grumps-Bingo-Angular/master/app-ggb/src/assets/images/gg_website_screenshot.png)
+![Website Screenshot](https://raw.githubusercontent.com/RappsFF7/Game-Grumps-Bingo-React-NextJs/master/app-ggb/public/assets/images/gg_website_screenshot.png)
 
 ## Features
 
