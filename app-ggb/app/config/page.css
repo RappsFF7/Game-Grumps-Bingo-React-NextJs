@@ -1,0 +1,4 @@
+#config-wrapper { margin-bottom: 15px; }
+
+#config-area { padding: 25px; }
+#config-area input[name=name] { text-align: center; }
