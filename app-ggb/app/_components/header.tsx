@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import useGameboard from "@/app/hooks/useGameboard"
+import useGameboard from "@/app/_hooks/useGameboard"
 import './header.css'
 
 export default function Header() {

@@ -1,7 +1,7 @@
 'use client'
 
 import { PropsWithChildren, createContext, useContext, useState } from "react";
-import Gameboard from "@/app/models/gameboard";
+import Gameboard from "@/app/_models/gameboard";
 
 // Value / State
 export type GameboardContextData = {

@@ -1,9 +1,9 @@
 'use client'
 
 import { ChangeEvent } from "react"
-import useGameboard from "@/app/hooks/useGameboard"
-import Tile from "@/app/models/tile"
-import {default as GameboardType} from "@/app/models/gameboard"
+import useGameboard from "@/app/_hooks/useGameboard"
+import Tile from "@/app/_models/tile"
+import {default as GameboardType} from "@/app/_models/gameboard"
 import './gameboard.css'
 
 export default function Gameboard() {

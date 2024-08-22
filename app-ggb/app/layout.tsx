@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "@/app/components/header";
-import GameboardContextProvider from "@/app/contexts/gameboardContext";
+import Header from "@/app/_components/header";
+import GameboardContextProvider from "@/app/_contexts/gameboardContext";
 import "./globals.css";
 import "./layout.css";
 

@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Gameboard from "@/app/models/gameboard"
-import { useGameboardContext } from '@/app/contexts/gameboardContext'
+import Gameboard from "@/app/_models/gameboard"
+import { useGameboardContext } from '@/app/_contexts/gameboardContext'
 import { Dosis } from 'next/font/google'
 
 export default function useGameboard() {

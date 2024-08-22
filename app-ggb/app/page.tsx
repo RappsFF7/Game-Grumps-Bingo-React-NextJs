@@ -1,4 +1,4 @@
-import Gameboard from "@/app/components/gameboard";
+import Gameboard from "@/app/_components/gameboard";
 
 export default function Home() {
   return (
