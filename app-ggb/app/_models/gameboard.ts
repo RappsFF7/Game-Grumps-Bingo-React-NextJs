@@ -129,7 +129,7 @@ export default class Gameboard {
         log('dataBox', dataBox);
 
         /** Checks a single cell for bingo */
-        var isCellBingo = function (dataBox: boolean[][], posX: number, posY: number, runX: number, runY: number, checkedCount: number, codeBranch: string) {
+        var isCellBingo = function (dataBox: boolean[][], posX: number, posY: number, runX: number, runY: number, checkedCount: number, codeBranch: string): boolean {
             var isBingoData = {
                 pos: posX + "," + posY,
                 run: runX + "," + runY,
@@ -187,6 +187,8 @@ export default class Gameboard {
                     return false
                 }
             }
+
+            return false
         }
 
         /** Walks the board, checking every cell for bingo */
